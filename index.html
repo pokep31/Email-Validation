@@ -4,23 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Show Password Strength</title>
+  <title>Email Validation in JavaScript</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
+  <form action="#">
     <div class="input-box">
-      <i class="fas fa-eye-slash show_hide"></i>
-      <input type="password" spellcheck="false" placeholder="Enter Password">
+      <input class="input" type="text" placeholder="Introduce tu correo">
+      <i class="fas fa-envelope email-icon"></i>
+      <i class="fas fa-exclamation-circle error-icon"></i>
+      <i class="fas fa-check-circle passed-icon"></i>
+      <input class="button" type="submit" value="Check">
     </div>
-    <div class="indicator">
-      <div class="icon-text">
-        <i class="fas fa-exclamation-circle error_icon"></i>
-        <h6 class="text"></h6>
-      </div>
-    </div>
-  </div>
+    <p class="text"></p>
+  </form>  
 
   <script src="javascript/script.js"></script>
 

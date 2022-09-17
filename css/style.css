@@ -12,66 +12,118 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #7d2ae8;
+  padding: 0 20px;
+  background: linear-gradient(#4671ea, #ac34e7);
 }
 
-.container{
-  position: relative;
-  max-width: 460px;
+form{
+  max-width: 550px;
   width: 100%;
-  margin: 0 20px;
   padding: 30px;
   border-radius: 4px;
   background: #fff;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
-.container .input-box{
+form .input-box{
   position: relative;
-}
-
-.input-box .show_hide{
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #a6a6a6;
-  cursor: pointer;
-  padding: 5px;
+  display: flex;
+  align-items: center;
+  height: 55px;
 }
 
 .input-box input{
-  height: 60px;
-  width: 100%;
-  border: 2px solid #d3d3d3;
+  height: 100%;
+  outline: none;
   border-radius: 4px;
+  border: 2px solid #bfbfbf;
   font-size: 18px;
   font-weight: 500;
-  color: #333;
-  outline: none;
-  padding: 0 50px 0 16px;
 }
 
-.container .indicator{
+.input-box input.input{
+  width: 75%;
+  margin-right: 20px;
+  padding: 0 45px;
+}
+
+/* form.valid .input-box input.input{
+  border-color: #4671ea;
+} */
+
+.input-box input.input:focus{
+  border-color: #4671ea;
+}
+
+form.error input.input{
+  border-color: #de0611;
+}
+
+form.valid input.input{
+  border-color: #1748cf;
+}
+
+.input-box input.button{
+  width: 25%;
+  color: #fff;
+  background: #4671ea;
+  border: none;
+}
+
+.input-box input.button:hover{
+  background: #1748cf;
+}
+
+.input-box i{
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-box i.email-icon{
+  color: #bfbfbf;
+  left: 15px;
+  transition: all 0.3s ease;
+}
+
+form.error i.email-icon{
+  color: #de0611;
+}
+
+form.valid i.email-icon{
+  color: #1748cf;
+}
+
+.input-box input.input:focus ~ i.email-icon{
+  color: #1748cf;
+}
+
+.input-box .error-icon,
+.input-box .passed-icon{
+  color: #de0611;
+  left: calc(75% - 60px);
   display: none;
 }
 
-.container .indicator.active{
+form.error .error-icon{
   display: block;
-  margin-top: 14px;
 }
 
-.indicator .icon-text{
-  display: flex;
-  align-items: center;
+.input-box .passed-icon{
+  color: #1748cf;
 }
 
-.icon-text .error_icon{
-  margin-right: 8px;
+form.valid .passed-icon{
+  display: block;
 }
 
-.icon-text .text{
-  font-size: 14px;
+form .text{
+  color: #de0611;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 1px;
+  margin: 10px 0 -10px 2px;
+}
+
+form.valid .text{
+  color: #1748cf;
 }
